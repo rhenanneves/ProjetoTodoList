@@ -1,57 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
-    <title>ToDo List</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
-    <div class="inicio">
-        <div class="nav">
-            <ul class="navbar">
-                <a href="">
-                    <li class="navli">MinhaLista.com</li>
-                </a>
-            </ul>
-        </div>
-        <hr>
-        <div class="container">
-            <h1>Minha Lista de Tarefas</h1>
-            <div id="app1" class="flex-container">
-                <div class="column" id="column1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <div class="column-header">
-                        <span>A fazer</span>
-                        <button class="add-task-btn" onclick="addTask(1)">+</button>
-                    </div>
-                    <ul class="task-list"></ul>
-                </div>
-                <div class="column" id="column2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <div class="column-header">
-                        <span>Pendente</span>
-                        <button class="add-task-btn" onclick="addTask(2)">+</button>
-                    </div>
-                    <ul class="task-list"></ul>
-                </div>
-                <div class="column" id="column3" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <div class="column-header">
-                        <span>Feito</span>
-                        <button class="add-task-btn" onclick="addTask(3)">+</button>
-                    </div>
-                    <ul class="task-list"></ul>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Enter a todo...">
+            <button type="submit">Add Todo</button>
+        </form>
+        <ul id="todo-list">
+            <!-- Todos will be dynamically added here -->
+        </ul>
     </div>
-
     <script src="script.js"></script>
+    
 </body>
-
 </html>
